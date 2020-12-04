@@ -1,49 +1,32 @@
-const staticDevCoffee = "dev-coffee-site-v1"
+const statics = "coffeStatic"
 const assets = [
     "/",
     "/index.html",
     "/style.css",
     "/app.js",
-    "/coffee1.jpg",
-    "/coffee2.jpg",
-    "/coffee3.jpg",
-    "/coffee4.jpg",
-    "/coffee5.jpg",
+    //    "/coffee1.jpeg",
+    "/coffee2.jpeg",
+    "/coffee3.jpeg",
+    "/coffee4.jpeg",
+    "/coffee5.jpeg",
 ]
+version = "v1 "
 
 self.addEventListener("install", installEvent => {
-    console.log("SALAM")
+    console.log("installing...")
     installEvent.waitUntil(
-        caches.open(staticDevCoffee).then(cache => {
+        caches.open(version + "init").then(cache => {
             cache.addAll(assets)
-        })
+        }).then(res => { console.log("sucess!") })
     )
-})
-
-self.addEventListener('fetch', function(event) {
-
-    event.respondWith(
-        caches.match(event.request)
-        .then(function(response) {
-            // Cache hit - return response
-            if (response) {
-                return response;
-            }
-            return fetch(event.request);
-        })
-    );
 });
 
 self.addEventListener('fetch', function(event) {
-    console.log("FETCH", event)
+    console.log("fetching...", event.request.url);
     event.respondWith(
         caches.match(event.request)
         .then(function(response) {
-            // Cache hit - return response
-            if (response) {
-                return response;
-            }
-
+            console.log("matched!");
             return fetch(event.request).then(
                 function(response) {
                     // Check if we received a valid response
@@ -57,14 +40,14 @@ self.addEventListener('fetch', function(event) {
                     // to clone it so we have two streams.
                     var responseToCache = response.clone();
 
-                    caches.open(CACHE_NAME)
-                        .then(function(cache) {
-                            cache.put(event.request, responseToCache);
-                        });
+                    //                    caches.open(version + "net")
+                    //                        .then(function(cache) {
+                    //                            cache.put(event.request, responseToCache);
+                    //                        });
 
                     return response;
                 }
-            );
+            ).catch(res => response);
         })
     );
 });
