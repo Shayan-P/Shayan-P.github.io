@@ -1,0 +1,26 @@
+{
+    "name": "ShayanGame",
+    "short_name": "ShayanGame",
+    "start_url": "/",
+    "display": "fullscreen",
+    "background_color": "#fdfdfd",
+    "theme_color": "#db4938",
+    "serviceworker": {
+  	"src": "./serviceWorker.js",
+  	"scope": "/",
+  	"type": "",
+  	"update_via_cache": "none"
+    },
+    "icons":[
+	    {
+	    "src": "images/X-button.png",
+	    "sizes": "242x242",
+	    "type": "image/png"
+	    },
+	    {
+	    "src": "images/square-X.png",
+	    "sizes": "64x64",
+	    "type": "image/png"
+	    }	    
+    ]
+}
