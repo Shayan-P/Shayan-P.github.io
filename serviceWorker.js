@@ -5,16 +5,17 @@ const assets = [
 version = "v1 "
 
 self.addEventListener("install", installEvent => {
-    console.log("installing...")
+/*    console.log("installing...")
     installEvent.waitUntil(
         caches.open(version + "init").then(cache => {
             cache.addAll(assets)
         }).then(res => { console.log("sucess!") })
-    )
+    )*/
 });
 
 self.addEventListener('fetch', function(event) {
-    console.log("fetching...", event.request.url);
+    return fetch(event.request);
+/*    console.log("fetching...", event.request.url);
     event.respondWith(
         caches.match(event.request)
         .then(function(response) {
@@ -35,5 +36,5 @@ self.addEventListener('fetch', function(event) {
                 }
             ).catch(res => response);
         })
-    );
+    );*/
 });
