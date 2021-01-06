@@ -44,14 +44,11 @@
     <script src="js/jquery-1.9.1.js"></script>
     <script src="js/jquery-ui.js"></script>
     <script src="js/info.js"></script>
-    <div id="infoButton"></div>
-    <div id="infoBox" title="Demo Information">
-        This three.js demo is part of a collection at
-        <a href="http://stemkoski.github.io/Three.js/">http://stemkoski.github.io/Three.js/</a>
-    </div>
-    <!-- ------------------------------------------------------------ -->
 
     <div id="ThreeJS" style="z-index: 1; position: absolute; left:0px; top:0px"></div>
+    <h3>
+        press x, y, z on keyboard to rotate the cube
+    </h3>
     <script>
         /*
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 	Three.js "tutorials by example"
@@ -178,7 +175,7 @@
             //////////////
             // GEOMETRY //
             //////////////
-
+            /*
             // most objects displayed are a "mesh":
             //  a collection of points ("geometry") and
             //  a set of surface parameters ("material")	
@@ -193,7 +190,7 @@
             sphere = new THREE.Mesh(sphereGeometry, sphereMaterial);
             sphere.position.set(100, 50, -50);
             scene.add(sphere);
-
+            */
             // Create an array of materials to be used in a cube, one for each side
             var cubeMaterialArray = [];
             // order to add materials: x+,x-,y+,y-,z+,z-
@@ -227,14 +224,16 @@
 
             // create a set of coordinate axes to help orient user
             //    specify length in pixels in each direction
+            /*
             var axes = new THREE.AxisHelper(100);
             scene.add(axes);
-
+            */
             ///////////
             // FLOOR //
             ///////////
 
             // note: 4x4 checkboard pattern scaled so that each square is 25 by 25 pixels.
+            /*
             var floorTexture = new THREE.ImageUtils.loadTexture('images/checkerboard.jpg');
             floorTexture.wrapS = floorTexture.wrapT = THREE.RepeatWrapping;
             floorTexture.repeat.set(10, 10);
@@ -248,7 +247,7 @@
             floor.position.y = -0.5;
             floor.rotation.x = Math.PI / 2;
             scene.add(floor);
-
+            */
             /////////
             // SKY //
             /////////
@@ -284,6 +283,7 @@
             var delta = clock.getDelta();
 
             // functionality provided by THREEx.KeyboardState.js
+            /*
             if (keyboard.pressed("a"))
                 cube.position.z -= 5
             if (keyboard.pressed("s"))
@@ -301,7 +301,14 @@
                 sphere.position.x += 5
             if (keyboard.pressed("j"))
                 sphere.position.z += 5
-            cube.rotation.y += 0.1
+            */
+            if (keyboard.pressed("x"))            
+                cube.rotation.x += 0.1
+            if (keyboard.pressed("y"))            
+                cube.rotation.y += 0.1
+            if (keyboard.pressed("z"))            
+                cube.rotation.z += 0.1
+/*
             abs = x => {
                 return x < 0 ? -x : x;
             }
@@ -309,6 +316,7 @@
                 document.getElementById('win').innerHTML = "you won"
             else
                 document.getElementById('win').innerHTML = ""
+            */
         }
 
         function render() {
