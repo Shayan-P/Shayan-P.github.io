@@ -57,7 +57,7 @@ export function getTree() {
 
 
 const cvNode = addItem({
-    description: "You can download a more formal resume <a href=\"cv.pdf\">here</a>",
+    description: "You can download a more formal resume <a href=\"/static/cv.pdf\">here</a>",
     picture: "/static/images/cv.png",
 }, rootItem);
 
