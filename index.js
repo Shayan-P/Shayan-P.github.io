@@ -7,7 +7,7 @@ const cv = {
     children:[
         {
             id: "cv",
-            desc: "You can download a more formal resume <a href=\"cv.pdf\">here</a>",
+            desc: "You can download a more formal resume <a href=\"static/cv.pdf\">here</a>",
             radius: 40,
             parentEdgeValue: 5,
             picture: "images/cv.png",

@@ -1,0 +1,25 @@
+{
+  "include": [
+    "./src/*.ts"
+  ],
+
+  "compilerOptions": {
+    "strict": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitOverride": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noUncheckedIndexedAccess": true,
+
+    "target": "ES5",
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "esModuleInterop": true,
+    "outDir": "dist"
+  },
+
+  "exclude": [
+    "node_modules"
+  ]
+}

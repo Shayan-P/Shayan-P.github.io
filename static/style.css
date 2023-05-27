@@ -1,0 +1,38 @@
+html, body{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+
+body{
+    overflow: hidden;
+    background: pink;
+}
+
+.link {
+    border-radius: 10px;
+    stroke: blue;
+    stroke-width: 3px;
+    stroke-opacity: 30%;
+}
+
+.node {
+    overflow: hidden;
+    border-radius: 100%;
+    stroke: black;
+    stroke-width: 2px;
+}
+
+.node circle {
+    transform: scale(1.0);
+    transition: 400ms ease-in-out;
+}
+
+.node circle:hover {
+    transform: scale(1.2);
+}
+
+.node-image {
+    fill: gray;
+    z-index: 3;
+}
