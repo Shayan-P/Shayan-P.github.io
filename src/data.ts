@@ -177,7 +177,9 @@ addItem({
 }, carriotNode);
 
 const sharifNode = addItem({
-    description: "B.Sc. Computer Engineering, 2020-2022 (Tehran, Iran), GPA - 19.47/20",
+    description: "Sharif University of Technology (Tehran, Iran)<br>" +
+        "B.Sc. Computer Engineering, 2020-2022<br>" +
+        "GPA - 19.47/20",
     picture: "/static/images/sharif.jpg"
 }, rootItem);
 
@@ -211,7 +213,8 @@ addItem({
 
 
 const mitNode = addItem({
-    description: "B.Sc. Computer Science and Engineering (6-3), 2022-2025 (Cambridge, MA)<br>" +
+    description: "Massachusetts Institute of Technology (Cambridge, MA)<br>" +
+        "B.Sc. Computer Science and Engineering (6-3), 2022-2025<br>" +
         "GPA - 5.0/5.0<br>",
     picture: "/static/images/mit.jpg"
 }, rootItem);

@@ -69,7 +69,14 @@ export class GraphVisualizer {
                             .on('start', (event, node) => this.dragstarted(event, node))
                             .on('drag', (event, node) => this.dragged(event, node))
                             .on('end', (event, node) => this.dragended(event, node)))
-                    nodeEnter
+                        .append('g')
+                        .attr('class', 'inner-node');
+
+                    nodeEnter // white background
+                        .append('circle')
+                        .attr('r', d => d.relSize * this.config.circleRadiusUnit)
+                        .attr('fill', d => 'white');
+                    nodeEnter // image background
                         .append('circle')
                         .attr('r', d => d.relSize * this.config.circleRadiusUnit)
                         .attr('fill', d => `url(#${'pattern' + d.id})`);

@@ -23,12 +23,12 @@ body{
     stroke-width: 2px;
 }
 
-.node circle {
+.inner-node {
     transform: scale(1.0);
     transition: 400ms ease-in-out;
 }
 
-.node circle:hover {
+.inner-node:hover {
     transform: scale(1.2);
 }
 
