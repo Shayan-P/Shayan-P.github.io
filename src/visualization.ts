@@ -1,6 +1,7 @@
 import * as d3 from 'd3';
 import * as assert from "assert";
-import { Tooltip } from 'bootstrap';
+import d3Tip from 'd3-tip';
+import {timeout} from "./concurrancyUtils";
 
 export interface Node extends d3.SimulationNodeDatum {
     id: string;
@@ -22,23 +23,25 @@ export class GraphVisualizer {
     private readonly links: Link[] = [];
     private readonly config: {linkDistanceUnit: number, chargeStrength: number, circleRadiusUnit: number};
     private readonly simulation;
+    private hideTask;
 
     public constructor(
         private readonly container: SVGGElement,
     ) {
         const sizeFactor = Math.min(this.container.clientWidth, this.container.clientHeight) / 1000;
         this.config = {
-            linkDistanceUnit: 240 * sizeFactor,
-            circleRadiusUnit: 60 * sizeFactor,
-            chargeStrength: -100 * sizeFactor
+            linkDistanceUnit: 300 * sizeFactor,
+            circleRadiusUnit: 80 * sizeFactor,
+            chargeStrength: -60 * sizeFactor
         };
         this.simulation = d3.forceSimulation<Node, Link>(this.nodes)
             .force("charge", d3.forceManyBody().strength(this.config.chargeStrength))
             .force("collide", d3.forceCollide<Node>().radius(d => d.relSize * this.config.circleRadiusUnit))
-        // .force("gravity", d3.forceY<Node>(d => d.id === "0" ? 0 : 100).strength(0.1))
+            // .force("gravity", d3.forceY<Node>(d => d.id === "0" ? 0 : 100).strength(0.1))
             .on('tick', () => this.ticked());
 
         this.simulation.velocityDecay(0.05);
+        this.hideTask = () => {};
 
         this.registerResize();
     }
@@ -58,63 +61,72 @@ export class GraphVisualizer {
             .selectAll<SVGGElement, Node>('.node')
             .data(this.nodes, d => d.id)
             .join(
-            enter => {
-                const nodeEnter = enter
-                    .append('g')
-                    .attr('class', 'node')
-                    .call(d3.drag<SVGGElement, Node>()
-                        .on('start', (event, node) => this.dragstarted(event, node))
-                        .on('drag', (event, node) => this.dragged(event, node))
-                        .on('end', (event, node) => this.dragended(event, node)));
-                nodeEnter
-                    .append('circle')
-                    .attr('r', d => d.relSize * this.config.circleRadiusUnit)
-                    .attr('fill', d => `url(#${'pattern' + d.id})`);
-                nodeEnter.each(d =>
-                    d3.select(this.container)
-                        .append('defs')
-                        .append('pattern')
-                        .attr('id', 'pattern' + d.id)
-                        .attr('patternUnits', 'userSpaceOnUse')
-                        .attr('x', -d.relSize * this.config.circleRadiusUnit)
-                        .attr('y', -d.relSize * this.config.circleRadiusUnit)
-                        .attr('width', d.relSize * this.config.circleRadiusUnit*2)
-                        .attr('height', d.relSize * this.config.circleRadiusUnit*2)
-                        .append("image")
-                        .attr("xlink:href", d.image)
-                        .attr('width', d.relSize * this.config.circleRadiusUnit*2)
-                        .attr('height', d.relSize * this.config.circleRadiusUnit*2)
-                )
-                nodeEnter.each((d: Node, index: number, elements) => {
-                    const element = elements[index] ?? assert.fail();
-                    const tooltip = new Tooltip(element, {title: d.description});
-                    /* todo add tooltip */
+                enter => {
+                    const nodeEnter = enter
+                        .append('g')
+                        .attr('class', 'node')
+                        .call(d3.drag<SVGGElement, Node>()
+                            .on('start', (event, node) => this.dragstarted(event, node))
+                            .on('drag', (event, node) => this.dragged(event, node))
+                            .on('end', (event, node) => this.dragended(event, node)))
+                    nodeEnter
+                        .append('circle')
+                        .attr('r', d => d.relSize * this.config.circleRadiusUnit)
+                        .attr('fill', d => `url(#${'pattern' + d.id})`);
+                    nodeEnter.each(d =>
+                        d3.select(this.container)
+                            .append('defs')
+                            .append('pattern')
+                            .attr('id', 'pattern' + d.id)
+                            .attr('patternUnits', 'userSpaceOnUse')
+                            .attr('x', -d.relSize * this.config.circleRadiusUnit)
+                            .attr('y', -d.relSize * this.config.circleRadiusUnit)
+                            .attr('width', d.relSize * this.config.circleRadiusUnit*2)
+                            .attr('height', d.relSize * this.config.circleRadiusUnit*2)
+                            .append("image")
+                            .attr("xlink:href", d.image)
+                            .attr('width', d.relSize * this.config.circleRadiusUnit*2)
+                            .attr('height', d.relSize * this.config.circleRadiusUnit*2)
+                    )
 
-                    element.addEventListener('mouseenter', () => {
-                        tooltip.show();
+                    // @ts-ignore
+                    const tip = d3Tip()
+                        .attr('class', 'd3-tip')
+                        .offset([-10, 0])
+                        .html((event: any, d: Node) => {
+                            return d.description;
+                        })
+                    d3.select(this.container).call(tip);
+
+                    let that = this;
+                    nodeEnter.filter((d: Node) => {
+                        return d.description !== undefined && d.description.length > 0;
+                    }).on('mouseover', function (...args) {
+                        that.hideTask();
+                        tip.show.call(this, ...args);
+                    }).on('mouseout', function (...args) {
+                            that.hideTask = () => tip.hide.call(this, ...args);
+                            timeout(2300).then(that.hideTask);
                     });
-                    element.addEventListener('mouseleave', () => {
-                        tooltip.hide();
-                    });
-                })
-                return nodeEnter;
-            },
-            undefined,
-            exit => exit.remove());
+
+                    return nodeEnter;
+                },
+                undefined,
+                exit => exit.remove());
 
         d3.select(this.container)
             .selectAll<SVGLineElement, Link>('.link')
             .data(this.links, (d) => `${d.source.id}-${d.target.id}`)
             .join(
                 enter => enter
-                        .append('line')
-                        .attr('class', 'link'),
+                    .append('line')
+                    .attr('class', 'link'),
                 update => update,
                 exit => exit.remove());
 
         // Update the simulation
         this.simulation.nodes(this.nodes);
-        this.simulation.force('link', d3.forceLink<Node, Link>(this.links)
+        this.simulation.force('link', d3.forceLink<Node, Link>(this.links).strength(0.07)
             .distance((link) => link.target.relDistance * this.config.linkDistanceUnit));
         this.simulation.alpha(1).restart();
 
@@ -195,7 +207,7 @@ export class GraphVisualizer {
                     const element = entry.target;
                     this.simulation.force('center', d3.forceCenter(this.container.clientWidth/2, this.container.clientHeight/2)
                         .strength(0.1));
-                    this.simulation.force('boundary', boundaryForce({width: this.container.clientWidth, height: this.container.clientHeight, strength: 1}))
+                    this.simulation.force('boundary', boundaryForce({width: this.container.clientWidth, height: this.container.clientHeight, strength: 0.3}))
                     this.simulation.alpha(1).restart();
                     lastResizeTimeout = undefined;
                 }, 500);

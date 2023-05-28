@@ -36,3 +36,12 @@ body{
     fill: gray;
     z-index: 3;
 }
+
+.d3-tip {
+    line-height: 1;
+    color: black;
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: rgba(220, 220, 220, 0.85);
+}
