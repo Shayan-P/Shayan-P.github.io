@@ -6,12 +6,12 @@ html, body{
 
 body{
     overflow: hidden;
-    background: pink;
+    background: radial-gradient(circle, rgba(87,83,161,1) 1%, rgba(9,145,163,1) 33%, rgba(0,212,255,1) 69%, rgba(0,212,255,1) 95%);
 }
 
 .link {
     border-radius: 10px;
-    stroke: blue;
+    stroke: white;
     stroke-width: 3px;
     stroke-opacity: 30%;
 }

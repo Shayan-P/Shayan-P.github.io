@@ -20,7 +20,7 @@ export type Tree = {
     children: Tree[]
 }
 
-const rootItem: CVItem = {picture: "/static/images/shayan.jpeg", depth: 0, relSize: 1, relDistance: 1};
+const rootItem: CVItem = {picture: "/static/images/shayan.jpg", depth: 0, relSize: 1, relDistance: 1};
 const tree = {item: rootItem, children: []};
 
 
@@ -58,38 +58,38 @@ export function getTree() {
 
 const cvNode = addItem({
     description: "You can download a more formal resume <a href=\"/static/cv.pdf\">here</a>",
-    picture: "/static/images/cv.png",
+    picture: "/static/images/cv.jpg",
 }, rootItem);
 
 const highSchoolNode = addItem({
     description: "Studied in Shahid Dastgheib 1 HighSchool 2017-2020 (Shiraz, Iran)<br/>\
                   Taught Material of Olympiad in Informatics (Algorithms, Graph, Combinatorics, Programming in c++) 2019-2021 <br/>",
-    picture: "/static/images/sampad.png"
+    picture: "/static/images/sampad.jpg"
 }, rootItem);
 
 const yscNode = addItem({
     description: "Achieved Gold medal and 1st place in 29th Iranian National Olympiad in Informatics<br/>\
                                 Achieved Silver medal in 28th Iranian National Olympiad in Informatics (INOI)<br/>\
                                 Became a member of young scholars club",
-    picture: "/static/images/ysc.png"
+    picture: "/static/images/ysc.jpg"
 }, highSchoolNode);
 
 const apioNode = addItem({
     description: "Silver Medal, APIO 2020</br>Ranked 24th in Asia-Pacific Informatics Olympiad 2020, Indonesia",
-    picture: "/static/images/apio.png"
+    picture: "/static/images/apio.jpg"
 }, highSchoolNode);
 
 
 const ioiNode = addItem({
     description: "Gold Medal, IOI 2020</br>Ranked 10th in 32th International Olympiad in Informatics 2020, Singapore",
-    picture: "/static/images/ioi.png"
+    picture: "/static/images/ioi.jpg"
 }, highSchoolNode);
 
 const gtoiNode = addItem({
     description: "Achieved Gold medal and 1st place in 29th Iranian National Olympiad in Informatics<br/>\
         Achieved Silver medal in 28th Iranian National Olympiad in Informatics (INOI)<br/>\
         Became a member of young scholars club",
-    picture: "/static/images/ysc.png"
+    picture: "/static/images/ysc.jpg"
 }, highSchoolNode);
 
 const abarkelasNode = addItem({
@@ -102,26 +102,32 @@ const abarkelasNode = addItem({
 }, rootItem);
 
 addItem({
-    picture: "/static/images/python.png"
+    description: "python",
+    picture: "/static/images/python.jpg"
 }, abarkelasNode);
 addItem({
-    picture: "/static/images/django.png"
+    description: "django",
+    picture: "/static/images/django.jpg"
 }, abarkelasNode);
 addItem({
-    picture: "/static/images/postgres.png"
-}, abarkelasNode);
-// todo change this to linux
-addItem({
-    picture: "/static/images/ubuntu.png"
+    description: "postgres",
+    picture: "/static/images/postgres.jpg"
 }, abarkelasNode);
 addItem({
-    picture: "/static/images/docker.png",
+    description: "linux server",
+    picture: "/static/images/ubuntu.jpg"
 }, abarkelasNode);
 addItem({
-    picture: "/static/images/nuxt.png",
+    description: "docker",
+    picture: "/static/images/docker.jpg",
 }, abarkelasNode);
 addItem({
-    picture: "/static/images/vue.png"
+    description: "nuxt",
+    picture: "/static/images/nuxt.jpg",
+}, abarkelasNode);
+addItem({
+    description: "vue",
+    picture: "/static/images/vue.jpg"
 }, abarkelasNode);
 
 
@@ -131,15 +137,18 @@ const freelance = addItem({
 }, rootItem);
 
 addItem({
-    picture: "/static/images/cpp.png"
+    description: "c++",
+    picture: "/static/images/cpp.jpg"
 }, freelance);
 
 addItem({
+    description: "<a href='https://www.cgal.org/'>CGAL</a>: Computational Geometry Algorithms Library",
     picture: "/static/images/cgal.jpg"
 }, freelance);
 
 addItem({
-    picture: "/static/images/cmake.png"
+    description: "postgres",
+    picture: "/static/images/cmake.jpg"
 }, freelance);
 
 const carriotNode = addItem({
@@ -151,16 +160,20 @@ const carriotNode = addItem({
 }, rootItem);
 
 addItem({
-    picture: "/static/images/python.png",
+    description: "python",
+    picture: "/static/images/python.jpg",
 }, carriotNode);
 addItem({
-    picture: "/static/images/elastic.jpeg",
+    description: "elastic search",
+    picture: "/static/images/elastic.jpg",
 }, carriotNode);
 addItem({
-    picture: "/static/images/osm.png",
+    description: "osm: open source map",
+    picture: "/static/images/osm.jpg",
 }, carriotNode);
 addItem({
-    picture: "/static/images/pandas.png",
+    description: "pandas: Python Data Analysis Library",
+    picture: "/static/images/pandas.jpg",
 }, carriotNode);
 
 const sharifNode = addItem({
@@ -172,11 +185,11 @@ const acmNode = addItem({
     description: "ICPC 2021 World Finalist</br>" +
         "Won 1st spot as a team in regional ACM-ICPC competition <br/>" +
         "and was selected to participate in the world finals.",
-    picture: "/static/images/acm.png"
+    picture: "/static/images/acm.jpg"
 }, sharifNode);
 
 const socialNode = addItem({
-    picture: "/static/images/social.png"
+    picture: "/static/images/social.jpg"
 }, rootItem);
 
 addItem({
@@ -184,10 +197,14 @@ addItem({
     picture: "/static/images/email.jpg",
 }, socialNode);
 addItem({
-    description: "<a href=\"https://www.linkedin.com/in/shayan-pardis/\">shayan-pardis</a>",
-    picture: "/static/images/linkedin.png",
+    description: "<a href=\"https://www.linkedin.com/in/shayan-pardis/\">LinkedIn</a>",
+    picture: "/static/images/linkedin.jpg",
 }, socialNode);
 addItem({
-    description: "<a href=\"https://github.com/Shayan-P\">Shayan-P</a>",
-    picture: "/static/images/github.png",
+    description: "<a href=\"https://github.com/Shayan-P\">Github</a>",
+    picture: "/static/images/github.jpg",
+}, socialNode);
+addItem({
+    description: "<a href='https://codeforces.com/profile/Shayan.P'>Codeforces</a>",
+    picture: "/static/images/codeforces.jpg",
 }, socialNode);
