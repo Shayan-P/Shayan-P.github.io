@@ -208,3 +208,10 @@ addItem({
     description: "<a href='https://codeforces.com/profile/Shayan.P'>Codeforces</a>",
     picture: "/static/images/codeforces.jpg",
 }, socialNode);
+
+
+const mitNode = addItem({
+    description: "B.Sc. Computer Science and Engineering (6-3), 2022-2025 (Cambridge, MA)<br>" +
+        "GPA - 5.0/5.0<br>",
+    picture: "/static/images/mit.jpg"
+}, rootItem);
