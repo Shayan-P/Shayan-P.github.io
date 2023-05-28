@@ -33,13 +33,18 @@ function getNode(tree: Tree): Node {
 }
 
 async function walkTree(parent: Node|undefined, tree: Tree): Promise<void> {
-    vis.addNode(getNode(tree));
+    let thisNode = getNode(tree);
+    if(parent !== undefined) {
+        thisNode.x = parent.x;
+        thisNode.y = parent.y;
+    }
+    vis.addNode(thisNode);
     if(parent !== undefined) {
         vis.addLink({source: parent, target: getNode(tree)})
     }
     for(const child of tree.children) {
         await timeout(Math.random() * averageDelayBetween * 2);
-        await walkTree(getNode(tree), child);
+        await walkTree(thisNode, child);
     }
 }
 
