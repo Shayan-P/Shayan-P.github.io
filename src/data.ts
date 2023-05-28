@@ -93,8 +93,10 @@ const gtoiNode = addItem({
 }, highSchoolNode);
 
 const abarkelasNode = addItem({
-    description: "Worked at <a href=\"https://abarkelas.ir/\">Abarkelas</a> as a Web-Developer (Tehran, Iran)  Oct 2020 - June 2021\
-            Developed both backend and frontend using Django and NuxtJs. Set up Prometheus and Grafana for monitoring. Turned the website to PWA (Progressive Web Application).\
+    description: "Worked at <a href=\"https://abarkelas.ir/\">Abarkelas</a> as a Web-Developer (Tehran, Iran)  Oct 2020 - June 2021<br/>\
+            Developed both backend and frontend using Django and NuxtJs.<br/>\
+            Set up Prometheus and Grafana for monitoring.<br/>\
+            Turned the website to PWA (Progressive Web Application).<br/>\
             <br>Abarkelas is an online live course platform to make quality education accessible for every Iranian student",
     picture: "/static/images/abarkelas.jpg",
 }, rootItem);
@@ -141,9 +143,9 @@ addItem({
 }, freelance);
 
 const carriotNode = addItem({
-    description: "Worked at <a href=\"https://carriot.ir/\">Carriot</a> as a Data Science Intern  (Tehran, Iran)  July 2021 - Sep 2021\ \
-            Designed and developed a statistical model to parse addresses and find the corresponding \
-            locations with OSM (geocoding problem). used Hidden Markov Model to do POS tagging on \
+    description: "Worked at <a href=\"https://carriot.ir/\">Carriot</a> as a Data Science Intern  (Tehran, Iran)  July 2021 - Sep 2021\<br/>\
+            Designed and developed a statistical model to parse addresses and find the corresponding<br/>\
+            locations with OSM (geocoding problem). used Hidden Markov Model to do POS tagging on <br/>\
             addresses and tuned the Elastic search engine to store and retrieve the OSM data.",
     picture: "/static/images/carriot.jpg",
 }, rootItem);
@@ -167,7 +169,9 @@ const sharifNode = addItem({
 }, rootItem);
 
 const acmNode = addItem({
-    description: "ICPC 2021 World Finalist</br>Won 1st spot as a team in regional ACM-ICPC competition and was selected to participate in the world finals.",
+    description: "ICPC 2021 World Finalist</br>" +
+        "Won 1st spot as a team in regional ACM-ICPC competition <br/>" +
+        "and was selected to participate in the world finals.",
     picture: "/static/images/acm.png"
 }, sharifNode);
 
@@ -180,10 +184,10 @@ addItem({
     picture: "/static/images/email.jpg",
 }, socialNode);
 addItem({
-    description: "<a href=\"https://www.linkedin.com/in/shayan-pardis/\">LinkedIn</a>",
+    description: "<a href=\"https://www.linkedin.com/in/shayan-pardis/\">shayan-pardis</a>",
     picture: "/static/images/linkedin.png",
 }, socialNode);
 addItem({
-    description: "<a href=\"https://github.com/Shayan-P\">Github</a>",
+    description: "<a href=\"https://github.com/Shayan-P\">Shayan-P</a>",
     picture: "/static/images/github.png",
 }, socialNode);
