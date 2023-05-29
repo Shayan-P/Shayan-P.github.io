@@ -8,9 +8,9 @@ import {timeout} from "./concurrancyUtils";
 const svg = select('body')
     .append('svg')
     .attr('width', '100%')
-    .attr('height', '100%');
+    .attr('height', '100%').node() ?? assert.fail();
 
-const vis = new GraphVisualizer(svg.node() ?? assert.fail());
+const vis = new GraphVisualizer(svg);
 
 const averageDelayBetween = 200;
 
@@ -37,6 +37,9 @@ async function walkTree(parent: Node|undefined, tree: Tree): Promise<void> {
     if(parent !== undefined) {
         thisNode.x = parent.x;
         thisNode.y = parent.y;
+    } else {
+        thisNode.x = svg.clientWidth/2;
+        thisNode.y = svg.clientHeight/2;
     }
     vis.addNode(thisNode);
     if(parent !== undefined) {
