@@ -12,7 +12,7 @@ const svg = select('body')
 
 const vis = new GraphVisualizer(svg);
 
-const averageDelayBetween = 200;
+const averageDelayBetween = 10;
 
 let counter = 0;
 const map = new Map<Tree, Node>();

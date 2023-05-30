@@ -135,7 +135,7 @@ export class GraphVisualizer {
         this.simulation.nodes(this.nodes);
         this.simulation.force('link', d3.forceLink<Node, Link>(this.links).strength(0.07)
             .distance((link) => link.target.relDistance * this.config.linkDistanceUnit));
-        this.simulation.alpha(1).restart();
+        this.simulation.alpha(0.3).restart();
 
         // re-order line and nodes
         d3.select(this.container).selectAll<SVGLineElement, Link>('.link')
