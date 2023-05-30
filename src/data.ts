@@ -88,7 +88,7 @@ const ioiNode = addItem({
 const gtoiNode = addItem({
     description: "Coordinated and contributed in writing the book <a href='http://gtoi.shaazzz.ir/'>GTOI (Graph Theory for Olympiad in informatics)</a><br>" +
         "which soon became a popular reference that helps many students learn graph theory in an algorithmic approach.<br>" +
-        "The book is publically available online and it is written in Persian.",
+        "The book is publically available online, and it is written in Persian.",
     picture: "/static/images/gtoi.jpg"
 }, highSchoolNode);
 
