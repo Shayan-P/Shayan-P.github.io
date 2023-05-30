@@ -45,7 +45,7 @@ function addItem(info: CVInfo, parent: CVInfo): CVInfo {
         picture: info.picture,
         depth: parentTree.item.depth + 1,
         relDistance: info.relDistance ?? parentTree.item.relDistance * 0.6,
-        relSize: info.relSize ?? parentTree.item.relSize * 0.6
+        relSize: info.relSize ?? parentTree.item.relSize * 0.65
     };
     parentTree.children.push({item: item, children: []});
     return item;
@@ -82,14 +82,14 @@ const apioNode = addItem({
 
 const ioiNode = addItem({
     description: "Gold Medal, IOI 2020</br>Ranked 10th in 32th International Olympiad in Informatics 2020, Singapore",
-    picture: "/static/images/ioi.jpg"
+    picture: "/static/images/ioi.jpg",
 }, highSchoolNode);
 
 const gtoiNode = addItem({
-    description: "Achieved Gold medal and 1st place in 29th Iranian National Olympiad in Informatics<br/>\
-        Achieved Silver medal in 28th Iranian National Olympiad in Informatics (INOI)<br/>\
-        Became a member of young scholars club",
-    picture: "/static/images/ysc.jpg"
+    description: "Coordinated and contributed in writing the book <a href='http://gtoi.shaazzz.ir/'>GTOI (Graph Theory for Olympiad in informatics)</a><br>" +
+        "which soon became a popular reference that helps many students learn graph theory in an algorithmic approach.<br>" +
+        "The book is publically available online and it is written in Persian.",
+    picture: "/static/images/gtoi.jpg"
 }, highSchoolNode);
 
 const abarkelasNode = addItem({
