@@ -21,7 +21,7 @@ export interface Link extends d3.SimulationLinkDatum<Node> {
 export class GraphVisualizer {
     private readonly nodes: Node[] = [];
     private readonly links: Link[] = [];
-    private readonly config: {linkDistanceUnit: number, chargeStrength: number, circleRadiusUnit: number};
+    private readonly config: { linkDistanceUnit: number, chargeStrength: number, circleRadiusUnit: number };
     private readonly simulation;
     private hideTask;
 
@@ -35,13 +35,12 @@ export class GraphVisualizer {
             chargeStrength: -60 * sizeFactor
         };
         this.simulation = d3.forceSimulation<Node, Link>(this.nodes)
-            .force("charge", d3.forceManyBody().strength(this.config.chargeStrength))
-            .force("collide", d3.forceCollide<Node>().radius(d => d.relSize * this.config.circleRadiusUnit))
-            // .force("gravity", d3.forceY<Node>(d => d.id === "0" ? 0 : 100).strength(0.1))
             .on('tick', () => this.ticked());
+        this.applyAllForces();
 
         this.simulation.velocityDecay(0.05);
-        this.hideTask = () => {};
+        this.hideTask = () => {
+        };
 
         this.registerResize();
     }
@@ -88,12 +87,12 @@ export class GraphVisualizer {
                             .attr('patternUnits', 'userSpaceOnUse')
                             .attr('x', -d.relSize * this.config.circleRadiusUnit)
                             .attr('y', -d.relSize * this.config.circleRadiusUnit)
-                            .attr('width', d.relSize * this.config.circleRadiusUnit*2)
-                            .attr('height', d.relSize * this.config.circleRadiusUnit*2)
+                            .attr('width', d.relSize * this.config.circleRadiusUnit * 2)
+                            .attr('height', d.relSize * this.config.circleRadiusUnit * 2)
                             .append("image")
                             .attr("xlink:href", d.image)
-                            .attr('width', d.relSize * this.config.circleRadiusUnit*2)
-                            .attr('height', d.relSize * this.config.circleRadiusUnit*2)
+                            .attr('width', d.relSize * this.config.circleRadiusUnit * 2)
+                            .attr('height', d.relSize * this.config.circleRadiusUnit * 2)
                     )
 
                     // @ts-ignore
@@ -112,8 +111,8 @@ export class GraphVisualizer {
                         that.hideTask();
                         tip.show.call(this, ...args);
                     }).on('mouseout', function (...args) {
-                            that.hideTask = () => tip.hide.call(this, ...args);
-                            timeout(2300).then(that.hideTask);
+                        that.hideTask = () => tip.hide.call(this, ...args);
+                        timeout(2300).then(that.hideTask);
                     });
 
                     return nodeEnter;
@@ -139,7 +138,7 @@ export class GraphVisualizer {
 
         // re-order line and nodes
         d3.select(this.container).selectAll<SVGLineElement, Link>('.link')
-            .each(function(link) {
+            .each(function (link) {
                 const linkElement = this;
                 linkElement.parentNode?.insertBefore(linkElement, linkElement.parentNode.firstChild);
             });
@@ -163,11 +162,13 @@ export class GraphVisualizer {
         d.fx = event.x;
         d.fy = event.y;
     }
+
     private dragended(event: any, d: Node) {
         if (!event.active) this.simulation.alphaTarget(0);
         d.fx = null;
         d.fy = null;
     }
+
     private ticked() {
         this.selectLinks()
             .attr('x1', (d) => d.source?.x ?? assert.fail())
@@ -181,10 +182,32 @@ export class GraphVisualizer {
     private registerResize() {
         let lastResizeTimeout: NodeJS.Timeout | undefined;
 
-        const boundaryForce = (params: {width: number, height: number, strength: number}) => {
+        const resizeObserver = new ResizeObserver(entries => {
+            for (const entry of entries) {
+                if (lastResizeTimeout !== undefined) {
+                    clearTimeout(lastResizeTimeout);
+                }
+                // Set a new timeout to execute the resize logic after 1 second of inactivity
+                lastResizeTimeout = setTimeout(() => {
+                    this.applyAllForces();
+                    this.simulation.alpha(1).restart();
+                    lastResizeTimeout = undefined;
+                }, 500);
+            }
+        });
+        resizeObserver.observe(this.container);
+    }
+
+    private applyCenterForce() {
+        this.simulation.force('center', d3.forceCenter(this.container.clientWidth / 2, this.container.clientHeight / 2)
+            .strength(0.1));
+    }
+
+    private applyBoundaryForce() {
+        const boundaryForce = (params: { width: number, height: number, strength: number }) => {
             return (alpha: number) => {
                 for (const node of this.simulation.nodes()) {
-                    const { x, y, vx, vy } = node;
+                    const {x, y, vx, vy} = node;
                     const xminlim = 0.1 * params.width;
                     const xmaxlim = 0.9 * params.width;
                     const yminlim = 0.1 * params.height;
@@ -203,23 +226,23 @@ export class GraphVisualizer {
                 }
             };
         };
+        this.simulation.force('boundary', boundaryForce(
+            {width: this.container.clientWidth, height: this.container.clientHeight, strength: 0.3}));
+    }
 
-        const resizeObserver = new ResizeObserver(entries => {
-            for (const entry of entries) {
-                if (lastResizeTimeout !== undefined) {
-                    clearTimeout(lastResizeTimeout);
-                }
-                // Set a new timeout to execute the resize logic after 1 second of inactivity
-                lastResizeTimeout = setTimeout(() => {
-                    const element = entry.target;
-                    this.simulation.force('center', d3.forceCenter(this.container.clientWidth/2, this.container.clientHeight/2)
-                        .strength(0.1));
-                    this.simulation.force('boundary', boundaryForce({width: this.container.clientWidth, height: this.container.clientHeight, strength: 0.3}))
-                    this.simulation.alpha(1).restart();
-                    lastResizeTimeout = undefined;
-                }, 500);
-            }
-        });
-        resizeObserver.observe(this.container);
+    private applyChargeForce() {
+        this.simulation.force("charge", d3.forceManyBody().strength(this.config.chargeStrength));
+    }
+
+    private applyCollideForce() {
+        this.simulation.force("collide", d3.forceCollide<Node>()
+            .radius(d => d.relSize * this.config.circleRadiusUnit));
+    }
+
+    private applyAllForces() {
+        this.applyCollideForce();
+        this.applyChargeForce();
+        this.applyCenterForce();
+        this.applyBoundaryForce();
     }
 }
