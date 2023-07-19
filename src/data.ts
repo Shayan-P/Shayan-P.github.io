@@ -132,7 +132,7 @@ addItem({
 
 
 const simcon = addItem({
-    description: `Internship at <a href="https://www.simcon.com/">SIMCON</a> as C++ Developer  Sep 2021 - March 2022
+    description: `Internship at <a href="https://www.simcon.com/">SIMCON</a> as Geometric Algorithm Designer Sep 2021 - March 2022
                   <br>
                   <p>
                       Designed and implemented an algorithm converting 3D Mesh into
