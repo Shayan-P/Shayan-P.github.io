@@ -44,4 +44,6 @@ body{
     border-radius: 5px;
     padding: 10px;
     background-color: rgba(220, 220, 220, 0.85);
+    max-width: 30vw;
+    text-wrap: inherit;
 }

@@ -131,25 +131,31 @@ addItem({
 }, abarkelasNode);
 
 
-const freelance = addItem({
-    description: "Worked as a freelancer C++ developer  Sep 2021 - March 2022",
-    picture: "/static/images/freelance.jpg"
+const simcon = addItem({
+    description: `Internship at <a href="https://www.simcon.com/">SIMCON</a> as C++ Developer  Sep 2021 - March 2022
+                  <br>
+                  <p>
+                      Designed and implemented an algorithm converting 3D Mesh into
+                      simplified skeleton Graph with substantial accuracy improvement.
+                  </p>
+    `,
+    picture: "/static/images/Simcon.png"
 }, rootItem);
 
 addItem({
     description: "c++",
     picture: "/static/images/cpp.jpg"
-}, freelance);
+}, simcon);
 
 addItem({
     description: "<a href='https://www.cgal.org/'>CGAL</a>: Computational Geometry Algorithms Library",
     picture: "/static/images/cgal.jpg"
-}, freelance);
+}, simcon);
 
 addItem({
     description: "postgres",
     picture: "/static/images/cmake.jpg"
-}, freelance);
+}, simcon);
 
 const carriotNode = addItem({
     description: "Worked at <a href=\"https://carriot.ir/\">Carriot</a> as a Data Science Intern  (Tehran, Iran)  July 2021 - Sep 2021\<br/>\
@@ -211,6 +217,10 @@ addItem({
     picture: "/static/images/codeforces.jpg",
 }, socialNode);
 
+addItem({
+    description: "<a href='https://www.youtube.com/channel/UCQ-SFbBy1-8SriVONWreK7g'>my youtube channel</a>",
+    picture: "/static/images/youtube.png",
+}, socialNode);
 
 const mitNode = addItem({
     description: "Massachusetts Institute of Technology (Cambridge, MA)<br>" +
@@ -218,3 +228,57 @@ const mitNode = addItem({
         "GPA - 5.0/5.0<br>",
     picture: "/static/images/mit.jpg"
 }, rootItem);
+
+const bobBerwickLA = addItem({
+    description: `Teaching Assistant (MIT) Sep 2022 - Dec 2022
+                <br>
+                <p>
+                Revised and created new lab practices covering the topics:
+                Segmentation, Parsers (CKY, Earley), Semantic Parsing with Lambda
+                Calculus, and Grammar Inference (inside-outside algorithm).
+                </p>`,
+    picture: "/static/images/6.8630-la.png",
+}, mitNode);
+
+
+const GSoC = addItem({
+    description: `<a href="https://summerofcode.withgoogle.com/">Google Summer of Code</a> Contributor   June 2023 - now
+                <br>
+                <p>
+                Developing GPU acceleration support for <a href="https://github.com/QuantumSavory/QuantumClifford.jl">QuantumClifford.jl</a>, a
+                Julia package designed for Quantum Stabilizer circuits (<a href="https://summerofcode.withgoogle.com/myprojects/details/7KTadSTv">details</a>).
+                </p>
+`,
+    picture: "/static/images/GSoC.png",
+}, mitNode);
+
+
+const biomimeticsLab = addItem({
+    description: `Research Experience (UROP)   Feb 2023 - now
+                  <br>
+                  Lab: <a href="https://biomimetics.mit.edu/">MIT Biomimetic Robotics Lab</a> led by <a href="https://meche.mit.edu/people/faculty/SANGBAE@MIT.EDU">Sangbae Kim</a>
+                  
+                  <p>
+                  My work on optimizing Humanoid Robot’s QP-based controller significantly improved the throughput (4x) 
+                  of the controller by parallelizing the computation (in C++).
+                  </p>`,
+    picture: "/static/images/biomimetics-lab.png",
+}, mitNode);
+
+
+const faceExplore = addItem({
+    description: `Personal Project  June 2023 - now
+    <br>
+    Developed the <a href="https://github.com/Shayan-P/FaceExplore">FaceExplore</a> project from scratch.
+    <br>
+    <p>
+    FaceExplore is a face search engine that uses MTCNN, Resnet, and AgglomerativeClustering to detect faces 
+    of people from a huge dataset of images (unsupervised learning).
+    </p>
+    <p>
+    In addition to the core, the service has a website (used React, Flask, Nginx, Docker) that can easily be deployed.
+    </p>
+    Initially, I made it as a search engine on "MIT Ring Delivery for class of 2025" album gallery (3000 pictures of 500 people) 
+`,
+    picture: "/static/images/face-explore.jpg",
+}, mitNode);
