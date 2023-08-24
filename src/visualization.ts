@@ -2,6 +2,8 @@ import * as d3 from 'd3';
 import * as assert from "assert";
 import d3Tip from 'd3-tip';
 import {timeout} from "./concurrancyUtils";
+import {Tooltip} from "./tooltip";
+import {select, timer} from "d3";
 
 export interface Node extends d3.SimulationNodeDatum {
     id: string;
@@ -95,24 +97,40 @@ export class GraphVisualizer {
                             .attr('height', d.relSize * this.config.circleRadiusUnit * 2)
                     )
 
-                    // @ts-ignore
-                    const tip = d3Tip()
-                        .attr('class', 'd3-tip')
-                        .offset([-10, 0])
-                        .html((event: any, d: Node) => {
-                            return d.description;
-                        })
-                    d3.select(this.container).call(tip);
+                    let tip = new Tooltip();
+                    document.body.appendChild(tip.getNode());
 
                     let that = this;
+                    let keep = false;
+                    let linger = false;
+                    let lingerTimeout:NodeJS.Timeout;
+                    let showTimeout:NodeJS.Timeout;
+
+                    tip.getNode().onmouseover = (() => {
+                        linger = true;
+                        clearTimeout(lingerTimeout)
+                    });
+                    tip.getNode().onmouseout = ( () => {
+                        linger = false;
+                        lingerTimeout = setTimeout(this.hideTask, 800)
+                    });
+
                     nodeEnter.filter((d: Node) => {
                         return d.description !== undefined && d.description.length > 0;
                     }).on('mouseover', function (...args) {
+                        keep = true;
+                        clearTimeout(showTimeout)
+                        tip.setData(...args, that.config.circleRadiusUnit);
                         that.hideTask();
-                        tip.show.call(this, ...args);
+                        tip.show();
                     }).on('mouseout', function (...args) {
-                        that.hideTask = () => tip.hide.call(this, ...args);
-                        timeout(2300).then(that.hideTask);
+                        keep = false;
+                        that.hideTask = () => {
+                            if (!keep && !linger) {
+                                tip.hide();
+                            }
+                        };
+                        showTimeout = setTimeout(that.hideTask, 800)
                     });
 
                     return nodeEnter;
