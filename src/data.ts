@@ -153,7 +153,7 @@ addItem({
 }, simcon);
 
 addItem({
-    description: "postgres",
+    description: "CMake",
     picture: "/static/images/cmake.jpg"
 }, simcon);
 
