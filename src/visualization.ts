@@ -101,35 +101,24 @@ export class GraphVisualizer {
                     document.body.appendChild(tip.getNode());
 
                     let that = this;
-                    let keep = false;
-                    let linger = false;
-                    let lingerTimeout:NodeJS.Timeout;
                     let showTimeout:NodeJS.Timeout;
 
                     tip.getNode().onmouseover = (() => {
-                        linger = true;
-                        clearTimeout(lingerTimeout)
+                        clearTimeout(showTimeout)
                     });
                     tip.getNode().onmouseout = ( () => {
-                        linger = false;
-                        lingerTimeout = setTimeout(this.hideTask, 800)
+                        showTimeout = setTimeout(this.hideTask, 800)
                     });
 
                     nodeEnter.filter((d: Node) => {
                         return d.description !== undefined && d.description.length > 0;
                     }).on('mouseover', function (...args) {
-                        keep = true;
                         clearTimeout(showTimeout)
                         tip.setData(...args, that.config.circleRadiusUnit);
                         that.hideTask();
                         tip.show();
                     }).on('mouseout', function (...args) {
-                        keep = false;
-                        that.hideTask = () => {
-                            if (!keep && !linger) {
-                                tip.hide();
-                            }
-                        };
+                        that.hideTask = () => tip.hide();
                         showTimeout = setTimeout(that.hideTask, 800)
                     });
 
