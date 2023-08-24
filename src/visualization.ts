@@ -1,9 +1,6 @@
 import * as d3 from 'd3';
 import * as assert from "assert";
-import d3Tip from 'd3-tip';
-import {timeout} from "./concurrancyUtils";
 import {Tooltip} from "./tooltip";
-import {select, timer} from "d3";
 
 export interface Node extends d3.SimulationNodeDatum {
     id: string;
