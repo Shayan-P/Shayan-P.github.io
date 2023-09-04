@@ -242,10 +242,10 @@ const bobBerwickLA = addItem({
 
 
 const GSoC = addItem({
-    description: `<a href="https://summerofcode.withgoogle.com/">Google Summer of Code</a> Contributor   June 2023 - now
+    description: `<a href="https://summerofcode.withgoogle.com/">Google Summer of Code</a> Contributor   June 2023 - Sep 2023
                 <br>
                 <p>
-                Developing GPU acceleration support for <a href="https://github.com/QuantumSavory/QuantumClifford.jl">QuantumClifford.jl</a>, a
+                Developed GPU support (CUDA) for <a href="https://github.com/QuantumSavory/QuantumClifford.jl">QuantumClifford.jl</a>, a
                 Julia package designed for Quantum Stabilizer circuits (<a href="https://summerofcode.withgoogle.com/myprojects/details/7KTadSTv">details</a>).
                 </p>
 `,
@@ -267,7 +267,7 @@ const biomimeticsLab = addItem({
 
 
 const faceExplore = addItem({
-    description: `Personal Project  June 2023 - now
+    description: `Personal Project  June 2023 - Aug 2023
     <br>
     Developed the <a href="https://github.com/Shayan-P/FaceExplore">FaceExplore</a> project from scratch.
     <br>
