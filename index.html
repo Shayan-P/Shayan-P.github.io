@@ -1,20 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NB76RCJ039"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terminal-like Frontend</title>
+  <style>
+    body {
+      font-family: 'Courier New', monospace;
+      margin: 0;
+      padding: 0;
+      background-color: #282c34;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
 
-        gtag('config', 'G-NB76RCJ039');
-    </script>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <link rel="stylesheet" href="static/style.css">
-    <title>Shayan.P</title>
+    #terminal {
+      width: 80%;
+      max-width: 600px;
+      height: 400px;
+      border: 1px solid #ccc;
+      overflow: auto;
+      padding: 10px;
+    }
+
+    #input-container {
+      display: flex;
+    }
+
+    #input {
+      flex: 1;
+      border: none;
+      background-color: transparent;
+      color: #ffffff;
+      padding: 5px;
+      font-size: 16px;
+    }
+
+    #input:focus {
+      outline: none;
+    }
+
+    .input-button {
+      border: none;
+      background-color: #61dafb;
+      color: #ffffff;
+      padding: 5px 10px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+  </style>
 </head>
 <body>
+  <div id="terminal"></div>
+  <div id="input-container">
+    <button id="take-1-button" class="input-button">take 1</button>
+    <button id="take-2-button" class="input-button">take 2</button>
+  </div>
+
+  <script>
+    const terminal = document.getElementById('terminal');
+    const input = document.getElementById('input');
+    const take1Button = document.getElementById('take-1-button');
+    const take2Button = document.getElementById('take-2-button');
+
+    take1Button.addEventListener('click', ()=>take(1));
+    take2Button.addEventListener('click', ()=>take(2));
+
+    let n = 20;
+
+    function take(num) {
+        if(n <= 0)
+            return;
+        if(n < num) {
+            appendToTerminal(`You cannot eat more than the number of available apples`);
+            return;
+        }
+
+        n-= num;
+        appendToTerminal(`You ate ${num} apples. Now there are ${n} left.`);
+        if(n == 0) { 
+            appendToTerminal("you one. congrats!");
+            return;
+        }
+
+        let me = Math.floor(Math.random() * 2) + 1;
+        if(n % 3 != 0) {
+            me = n % 3;
+        }
+
+        n-= me;
+        appendToTerminal(`I eat ${me} apples. Now there are ${n} left.`);
+
+        if(n == 0) {
+            appendToTerminal("I won. You lost. hehe (refresh the page to play again)");
+            return;
+        }
+    }
+
+    function appendToTerminal(text) {
+      const newLine = document.createElement('div');
+      newLine.textContent = '> ' + text;
+      terminal.appendChild(newLine);
+    }
+
+    appendToTerminal(`welcome! You have ${n} apples. At each turn, each of us can either eat 1 or 2 apples. The player that cannot eat any apple at the end looses. Let's play`)
+  </script>
 </body>
-<script src="dist/bundle.js" defer></script>
 </html>
