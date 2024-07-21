@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Shayan Pardis</title>
+    <link>https://shayan-p.github.io/temp_deploy/</link>
+    <description>Recent content on Shayan Pardis</description>
+    <generator>Hugo -- 0.129.0</generator>
+    <language>en</language>
+    <copyright>Shayan Pardis</copyright>
+    <lastBuildDate>Sun, 21 Jul 2024 16:27:02 -0400</lastBuildDate>
+    <atom:link href="https://shayan-p.github.io/temp_deploy/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Face Explore</title>
+      <link>https://shayan-p.github.io/temp_deploy/projects/face-explore/</link>
+      <pubDate>Sun, 21 Jul 2024 16:27:02 -0400</pubDate>
+      <guid>https://shayan-p.github.io/temp_deploy/projects/face-explore/</guid>
+      <description>Where did it all begin? MIT Ring Delivery
+How? My first approach was to rank the images in the database based on the distance of the vector embeddings of faces in the database and the sample. The result was terrible!
+Some random math here:
+$$ \int_0^\infty e^{-x^2} dx = \frac{\sqrt{\pi}}{2} $$</description>
+    </item>
+    <item>
+      <title>Human foundation model</title>
+      <link>https://shayan-p.github.io/temp_deploy/ideas/human-foundation-model/</link>
+      <pubDate>Sun, 21 Jul 2024 14:09:46 -0400</pubDate>
+      <guid>https://shayan-p.github.io/temp_deploy/ideas/human-foundation-model/</guid>
+      <description>Inpisred from a conversation with Arash Bidgoli.
+We are living in a world that data is flowing everywhere. Perhaps we could understand a person very well by just observing all their interactions with others.
+I always had this dream of cloning myself by just feeding all my diaries into a model. Perhaps just having the diaries is not enough but what if we store literally everything. Perhaps smart glasses might be the first step in achieving this.</description>
+    </item>
+    <item>
+      <title>Neural Implant</title>
+      <link>https://shayan-p.github.io/temp_deploy/ideas/neural-implant/</link>
+      <pubDate>Sun, 21 Jul 2024 01:23:20 -0400</pubDate>
+      <guid>https://shayan-p.github.io/temp_deploy/ideas/neural-implant/</guid>
+      <description>Neural Implant? Here we talk about matrix. Give them a vision.
+subtitle1 Here we talk about technical details. subtitle2 </description>
+    </item>
+  </channel>
+</rss>

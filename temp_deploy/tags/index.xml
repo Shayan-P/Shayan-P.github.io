@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Tags on Shayan Pardis</title>
+    <link>https://shayan-p.github.io/temp_deploy/tags/</link>
+    <description>Recent content in Tags on Shayan Pardis</description>
+    <generator>Hugo -- 0.129.0</generator>
+    <language>en</language>
+    <copyright>Shayan Pardis</copyright>
+    <lastBuildDate>Sun, 21 Jul 2024 16:27:02 -0400</lastBuildDate>
+    <atom:link href="https://shayan-p.github.io/temp_deploy/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Vision</title>
+      <link>https://shayan-p.github.io/temp_deploy/tags/vision/</link>
+      <pubDate>Sun, 21 Jul 2024 16:27:02 -0400</pubDate>
+      <guid>https://shayan-p.github.io/temp_deploy/tags/vision/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>NLP</title>
+      <link>https://shayan-p.github.io/temp_deploy/tags/nlp/</link>
+      <pubDate>Sun, 21 Jul 2024 01:23:20 -0400</pubDate>
+      <guid>https://shayan-p.github.io/temp_deploy/tags/nlp/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

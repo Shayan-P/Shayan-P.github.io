@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://shayan-p.github.io/temp_deploy/sitemap.xml
