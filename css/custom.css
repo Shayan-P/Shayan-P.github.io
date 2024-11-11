@@ -46,3 +46,13 @@
 .tag-button:hover {
     background-color: var(--tertiary);
 }
+
+
+@media (max-width: 600px) {
+    nav a[href="https://www.shayanp.me/old"] {
+        display: none !important;
+    }
+    nav a[href="https://shayanp.me/old"] {
+        display: none !important;
+    }
+}
