@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Idea Book 📔🖊️ on Shayan Pardis</title>
-    <link>https://shayanp.me/ideas/</link>
+    <link>https://shayan-p.github.io/ideas/</link>
     <description>Recent content in Idea Book 📔🖊️ on Shayan Pardis</description>
     <generator>Hugo -- 0.138.0</generator>
     <language>en</language>
     <copyright>Shayan Pardis</copyright>
     <lastBuildDate>Wed, 30 Oct 2024 01:23:20 -0400</lastBuildDate>
-    <atom:link href="https://shayanp.me/ideas/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://shayan-p.github.io/ideas/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Dynamic Neural Memory for In-Context Learning: SSMs or Transformers?</title>
-      <link>https://shayanp.me/ideas/neural-memory-for-in-context-learning/</link>
+      <link>https://shayan-p.github.io/ideas/neural-memory-for-in-context-learning/</link>
       <pubDate>Wed, 30 Oct 2024 01:23:20 -0400</pubDate>
-      <guid>https://shayanp.me/ideas/neural-memory-for-in-context-learning/</guid>
+      <guid>https://shayan-p.github.io/ideas/neural-memory-for-in-context-learning/</guid>
       <description>&lt;h3 id=&#34;motivation&#34;&gt;Motivation&lt;/h3&gt;
 &lt;p&gt;This idea was inspired by a talk that Albert Gu gave at Simons Institute Workshop &lt;a href=&#34;https://simons.berkeley.edu/workshops/transformers-computational-model&#34;&gt;Transformers as a Computational Model&lt;/a&gt; (&lt;a href=&#34;https://simons.berkeley.edu/talks/albert-gu-carnegie-mellon-university-2024-09-27&#34;&gt;link to the talk&lt;/a&gt;).
 While listening to this talk, I began to think about how we might design a new memory model by combining features from both State Space Models and transformers.&lt;/p&gt;
