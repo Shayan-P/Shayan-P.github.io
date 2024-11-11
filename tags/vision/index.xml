@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Vision on Shayan Pardis</title>
-    <link>https://shayanp.me/tags/vision/</link>
+    <link>https://www.shayanp.me/tags/vision/</link>
     <description>Recent content in Vision on Shayan Pardis</description>
     <generator>Hugo -- 0.138.0</generator>
     <language>en</language>
     <copyright>Shayan Pardis</copyright>
-    <atom:link href="https://shayanp.me/tags/vision/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://www.shayanp.me/tags/vision/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Face Explore</title>
-      <link>https://shayanp.me/projects/face-explore/</link>
+      <link>https://www.shayanp.me/projects/face-explore/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://shayanp.me/projects/face-explore/</guid>
+      <guid>https://www.shayanp.me/projects/face-explore/</guid>
       <description>Created a face search engine that uses a custom clustering method on ResNet vector embeddings (unsupervised). The UI is a scalable website.</description>
     </item>
   </channel>

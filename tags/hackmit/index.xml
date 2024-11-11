@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>HackMit on Shayan Pardis</title>
-    <link>https://shayanp.me/tags/hackmit/</link>
+    <link>https://www.shayanp.me/tags/hackmit/</link>
     <description>Recent content in HackMit on Shayan Pardis</description>
     <generator>Hugo -- 0.138.0</generator>
     <language>en</language>
     <copyright>Shayan Pardis</copyright>
-    <atom:link href="https://shayanp.me/tags/hackmit/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://www.shayanp.me/tags/hackmit/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Scripty</title>
-      <link>https://shayanp.me/projects/scripty/</link>
+      <link>https://www.shayanp.me/projects/scripty/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://shayanp.me/projects/scripty/</guid>
+      <guid>https://www.shayanp.me/projects/scripty/</guid>
       <description>Educational tool to track student performance on projects, providing live feedback and tips, and automating infrastructure setup for instructors. Built with Python, DSPy, Kubernetes, and React; won Warp and Orbstack challenge prizes.</description>
     </item>
   </channel>

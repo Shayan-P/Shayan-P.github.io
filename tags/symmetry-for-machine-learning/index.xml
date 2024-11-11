@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Symmetry for Machine Learning on Shayan Pardis</title>
-    <link>https://shayanp.me/tags/symmetry-for-machine-learning/</link>
+    <link>https://www.shayanp.me/tags/symmetry-for-machine-learning/</link>
     <description>Recent content in Symmetry for Machine Learning on Shayan Pardis</description>
     <generator>Hugo -- 0.138.0</generator>
     <language>en</language>
     <copyright>Shayan Pardis</copyright>
-    <atom:link href="https://shayanp.me/tags/symmetry-for-machine-learning/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://www.shayanp.me/tags/symmetry-for-machine-learning/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Shape Generation with SO3-Equivariant Auto-Encoders</title>
-      <link>https://shayanp.me/projects/novel-shape-generation-with-so3-equivariant-auto-encoders/</link>
+      <link>https://www.shayanp.me/projects/novel-shape-generation-with-so3-equivariant-auto-encoders/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://shayanp.me/projects/novel-shape-generation-with-so3-equivariant-auto-encoders/</guid>
+      <guid>https://www.shayanp.me/projects/novel-shape-generation-with-so3-equivariant-auto-encoders/</guid>
       <description>Designed an SO(3) equivariant autoencoder using spherical harmonics and a latent space traversal that separates rotation from deformation.</description>
     </item>
   </channel>
