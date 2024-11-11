@@ -1,0 +1,290 @@
+[
+  {
+    "URL": "https://arxiv.org/abs/2111.00396",
+    "author": [
+      {
+        "family": "Gu",
+        "given": "Albert"
+      },
+      {
+        "family": "Goel",
+        "given": "Karan"
+      },
+      {
+        "family": "R\u00e9",
+        "given": "Christopher"
+      }
+    ],
+    "container-title": "CoRR",
+    "id": "DBLP:journals/corr/abs-2111-00396",
+    "issued": {
+      "date-parts": [
+        [
+          2021
+        ]
+      ]
+    },
+    "title": "Efficiently modeling long sequences with structured state spaces",
+    "type": "article-journal",
+    "volume": "abs/2111.00396"
+  },
+  {
+    "URL": "http://arxiv.org/abs/1706.03762",
+    "author": [
+      {
+        "family": "Vaswani",
+        "given": "Ashish"
+      },
+      {
+        "family": "Shazeer",
+        "given": "Noam"
+      },
+      {
+        "family": "Parmar",
+        "given": "Niki"
+      },
+      {
+        "family": "Uszkoreit",
+        "given": "Jakob"
+      },
+      {
+        "family": "Jones",
+        "given": "Llion"
+      },
+      {
+        "family": "Gomez",
+        "given": "Aidan N."
+      },
+      {
+        "family": "Kaiser",
+        "given": "Lukasz"
+      },
+      {
+        "family": "Polosukhin",
+        "given": "Illia"
+      }
+    ],
+    "container-title": "CoRR",
+    "id": "DBLP:journals/corr/VaswaniSPUJGKP17",
+    "issued": {
+      "date-parts": [
+        [
+          2017
+        ]
+      ]
+    },
+    "title": "Attention is all you need",
+    "type": "article-journal",
+    "volume": "abs/1706.03762"
+  },
+  {
+    "URL": "https://arxiv.org/abs/2008.02217",
+    "author": [
+      {
+        "family": "Ramsauer",
+        "given": "Hubert"
+      },
+      {
+        "family": "Sch\u00e4fl",
+        "given": "Bernhard"
+      },
+      {
+        "family": "Lehner",
+        "given": "Johannes"
+      },
+      {
+        "family": "Seidl",
+        "given": "Philipp"
+      },
+      {
+        "family": "Widrich",
+        "given": "Michael"
+      },
+      {
+        "family": "Gruber",
+        "given": "Lukas"
+      },
+      {
+        "family": "Holzleitner",
+        "given": "Markus"
+      },
+      {
+        "family": "Pavlovic",
+        "given": "Milena"
+      },
+      {
+        "family": "Sandve",
+        "given": "Geir Kjetil"
+      },
+      {
+        "family": "Greiff",
+        "given": "Victor"
+      },
+      {
+        "family": "Kreil",
+        "given": "David P."
+      },
+      {
+        "family": "Kopp",
+        "given": "Michael"
+      },
+      {
+        "family": "Klambauer",
+        "given": "G\u00fcnter"
+      },
+      {
+        "family": "Brandstetter",
+        "given": "Johannes"
+      },
+      {
+        "family": "Hochreiter",
+        "given": "Sepp"
+      }
+    ],
+    "container-title": "CoRR",
+    "id": "DBLP:journals/corr/abs-2008-02217",
+    "issued": {
+      "date-parts": [
+        [
+          2020
+        ]
+      ]
+    },
+    "title": "Hopfield networks is all you need",
+    "type": "article-journal",
+    "volume": "abs/2008.02217"
+  },
+  {
+    "URL": "https://arxiv.org/abs/1410.3916",
+    "author": [
+      {
+        "family": "Weston",
+        "given": "Jason"
+      },
+      {
+        "family": "Chopra",
+        "given": "Sumit"
+      },
+      {
+        "family": "Bordes",
+        "given": "Antoine"
+      }
+    ],
+    "id": "weston2015memorynetworks",
+    "issued": {
+      "date-parts": [
+        [
+          2015
+        ]
+      ]
+    },
+    "title": "Memory networks",
+    "type": ""
+  },
+  {
+    "URL": "https://arxiv.org/abs/2106.02039",
+    "author": [
+      {
+        "family": "Janner",
+        "given": "Michael"
+      },
+      {
+        "family": "Li",
+        "given": "Qiyang"
+      },
+      {
+        "family": "Levine",
+        "given": "Sergey"
+      }
+    ],
+    "container-title": "CoRR",
+    "id": "DBLP:journals/corr/abs-2106-02039",
+    "issued": {
+      "date-parts": [
+        [
+          2021
+        ]
+      ]
+    },
+    "title": "Reinforcement learning as one big sequence modeling problem",
+    "type": "article-journal",
+    "volume": "abs/2106.02039"
+  },
+  {
+    "DOI": "10.5281/ZENODO.1207631",
+    "URL": "https://zenodo.org/record/1207631",
+    "author": [
+      {
+        "family": "Ha",
+        "given": "David"
+      },
+      {
+        "family": "Schmidhuber",
+        "given": "J\u00fcrgen"
+      }
+    ],
+    "id": "https://doi.org/10.5281/zenodo.1207631",
+    "issued": {
+      "date-parts": [
+        [
+          2018
+        ]
+      ]
+    },
+    "publisher": "Zenodo",
+    "title": "World models",
+    "type": "article-journal"
+  },
+  {
+    "URL": "https://arxiv.org/abs/2106.01345",
+    "author": [
+      {
+        "family": "Chen",
+        "given": "Lili"
+      },
+      {
+        "family": "Lu",
+        "given": "Kevin"
+      },
+      {
+        "family": "Rajeswaran",
+        "given": "Aravind"
+      },
+      {
+        "family": "Lee",
+        "given": "Kimin"
+      },
+      {
+        "family": "Grover",
+        "given": "Aditya"
+      },
+      {
+        "family": "Laskin",
+        "given": "Michael"
+      },
+      {
+        "family": "Abbeel",
+        "given": "Pieter"
+      },
+      {
+        "family": "Srinivas",
+        "given": "Aravind"
+      },
+      {
+        "family": "Mordatch",
+        "given": "Igor"
+      }
+    ],
+    "id": "chen2021decisiontransformerreinforcementlearning",
+    "issued": {
+      "date-parts": [
+        [
+          2021
+        ]
+      ]
+    },
+    "title": "Decision transformer: Reinforcement learning via sequence modeling",
+    "title-short": "Decision transformer",
+    "type": ""
+  }
+]

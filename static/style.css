@@ -1,0 +1,49 @@
+html, body{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+
+body{
+    overflow: hidden;
+    background: radial-gradient(circle, rgba(87,83,161,1) 1%, rgba(9,145,163,1) 33%, rgba(0,212,255,1) 69%, rgba(0,212,255,1) 95%);
+}
+
+.link {
+    border-radius: 10px;
+    stroke: white;
+    stroke-width: 3px;
+    stroke-opacity: 30%;
+}
+
+.node {
+    overflow: hidden;
+    border-radius: 100%;
+    stroke: black;
+    stroke-width: 2px;
+}
+
+.inner-node {
+    transform: scale(1.0);
+    transition: 400ms ease-in-out;
+}
+
+.inner-node:hover {
+    transform: scale(1.2);
+}
+
+.node-image {
+    fill: gray;
+    z-index: 3;
+}
+
+.d3-tip {
+    line-height: 1;
+    color: black;
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: rgba(220, 220, 220, 0.85);
+    max-width: 30vw;
+    text-wrap: inherit;
+}
