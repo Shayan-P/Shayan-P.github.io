@@ -2,11 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>About on Shayan Pardis</title>
-    <link>https://www.shayanp.me/about/</link>
+    <link>https://shayanp.me/about/</link>
     <description>Recent content in About on Shayan Pardis</description>
     <generator>Hugo -- 0.138.0</generator>
     <language>en</language>
     <copyright>Shayan Pardis</copyright>
-    <atom:link href="https://www.shayanp.me/about/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://shayanp.me/about/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

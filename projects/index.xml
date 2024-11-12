@@ -2,60 +2,60 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Publication and Projects on Shayan Pardis</title>
-    <link>https://www.shayanp.me/projects/</link>
+    <link>https://shayanp.me/projects/</link>
     <description>Recent content in Publication and Projects on Shayan Pardis</description>
     <generator>Hugo -- 0.138.0</generator>
     <language>en</language>
     <copyright>Shayan Pardis</copyright>
     <lastBuildDate>Sat, 01 Jun 2024 16:01:00 -0400</lastBuildDate>
-    <atom:link href="https://www.shayanp.me/projects/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://shayanp.me/projects/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Probabilistic Homotopy Optimization for Dynamic Motion Planning</title>
-      <link>https://www.shayanp.me/projects/probabilistic-homotopy-optimization-for-dynamic-motion-planning/</link>
+      <link>https://shayanp.me/projects/probabilistic-homotopy-optimization-for-dynamic-motion-planning/</link>
       <pubDate>Sat, 01 Jun 2024 16:01:00 -0400</pubDate>
-      <guid>https://www.shayanp.me/projects/probabilistic-homotopy-optimization-for-dynamic-motion-planning/</guid>
+      <guid>https://shayanp.me/projects/probabilistic-homotopy-optimization-for-dynamic-motion-planning/</guid>
       <description>Inspired by Curriculum Learning and Probabilistic Roadmaps, PHO traverses a multidimensional homotopy space and discovers highly dynamic trajectories.</description>
     </item>
     <item>
       <title>Shape Generation with SO3-Equivariant Auto-Encoders</title>
-      <link>https://www.shayanp.me/projects/novel-shape-generation-with-so3-equivariant-auto-encoders/</link>
+      <link>https://shayanp.me/projects/novel-shape-generation-with-so3-equivariant-auto-encoders/</link>
       <pubDate>Wed, 01 May 2024 16:01:00 -0400</pubDate>
-      <guid>https://www.shayanp.me/projects/novel-shape-generation-with-so3-equivariant-auto-encoders/</guid>
+      <guid>https://shayanp.me/projects/novel-shape-generation-with-so3-equivariant-auto-encoders/</guid>
       <description>Designed an SO(3) equivariant autoencoder using spherical harmonics and a latent space traversal that separates rotation from deformation.</description>
     </item>
     <item>
       <title>Decision State Space Model</title>
-      <link>https://www.shayanp.me/projects/decision-ssm/</link>
+      <link>https://shayanp.me/projects/decision-ssm/</link>
       <pubDate>Mon, 01 Apr 2024 16:01:00 -0400</pubDate>
-      <guid>https://www.shayanp.me/projects/decision-ssm/</guid>
+      <guid>https://shayanp.me/projects/decision-ssm/</guid>
       <description>Reimplemented Decision Transformer replacing transformer with S4 model and demonstrated improved performance in credit assignment tasks.</description>
     </item>
     <item>
       <title>Face Explore</title>
-      <link>https://www.shayanp.me/projects/face-explore/</link>
+      <link>https://shayanp.me/projects/face-explore/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://www.shayanp.me/projects/face-explore/</guid>
+      <guid>https://shayanp.me/projects/face-explore/</guid>
       <description>Created a face search engine that uses a custom clustering method on ResNet vector embeddings (unsupervised). The UI is a scalable website.</description>
     </item>
     <item>
       <title>Formal Complexity Verification</title>
-      <link>https://www.shayanp.me/projects/formal-complexity-verification/</link>
+      <link>https://shayanp.me/projects/formal-complexity-verification/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://www.shayanp.me/projects/formal-complexity-verification/</guid>
+      <guid>https://shayanp.me/projects/formal-complexity-verification/</guid>
       <description>Formulated time complexity verification of a program as synthesizing a fix-point function. The demo uses a custom language with Python syntax.</description>
     </item>
     <item>
       <title>Scripty</title>
-      <link>https://www.shayanp.me/projects/scripty/</link>
+      <link>https://shayanp.me/projects/scripty/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://www.shayanp.me/projects/scripty/</guid>
+      <guid>https://shayanp.me/projects/scripty/</guid>
       <description>Educational tool to track student performance on projects, providing live feedback and tips, and automating infrastructure setup for instructors. Built with Python, DSPy, Kubernetes, and React; won Warp and Orbstack challenge prizes.</description>
     </item>
     <item>
       <title>Sharif AI Challenge</title>
-      <link>https://www.shayanp.me/projects/sharif-ai-challenge/</link>
+      <link>https://shayanp.me/projects/sharif-ai-challenge/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://www.shayanp.me/projects/sharif-ai-challenge/</guid>
+      <guid>https://shayanp.me/projects/sharif-ai-challenge/</guid>
       <description>Developed AI agents for a multi-agent game, achieving 4th place in the competition. Implemented Huffman coding for cost-effective communication and utilized the A* algorithm for shortest pathfinding on a partially explored map.</description>
     </item>
   </channel>
