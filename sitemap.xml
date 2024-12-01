@@ -2,25 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://shayanp.me/blog/</loc>
-    <lastmod>2024-11-10T21:52:36-05:00</lastmod>
+    <loc>https://shayanp.me/tags/agentic-ai/</loc>
+    <lastmod>2024-11-30T01:23:20-04:00</lastmod>
+  </url><url>
+    <loc>https://shayanp.me/ideas/auto-recurrent-agent/</loc>
+    <lastmod>2024-11-30T01:23:20-04:00</lastmod>
+  </url><url>
+    <loc>https://shayanp.me/ideas/</loc>
+    <lastmod>2024-11-30T01:23:20-04:00</lastmod>
+  </url><url>
+    <loc>https://shayanp.me/tags/llm/</loc>
+    <lastmod>2024-11-30T01:23:20-04:00</lastmod>
+  </url><url>
+    <loc>https://shayanp.me/tags/nlp/</loc>
+    <lastmod>2024-11-30T01:23:20-04:00</lastmod>
+  </url><url>
+    <loc>https://shayanp.me/tags/reasoning/</loc>
+    <lastmod>2024-11-30T01:23:20-04:00</lastmod>
   </url><url>
     <loc>https://shayanp.me/</loc>
+    <lastmod>2024-11-30T01:23:20-04:00</lastmod>
+  </url><url>
+    <loc>https://shayanp.me/tags/</loc>
+    <lastmod>2024-11-30T01:23:20-04:00</lastmod>
+  </url><url>
+    <loc>https://shayanp.me/blog/</loc>
     <lastmod>2024-11-10T21:52:36-05:00</lastmod>
   </url><url>
     <loc>https://shayanp.me/ideas/neural-memory-for-in-context-learning/</loc>
     <lastmod>2024-10-30T01:23:20-04:00</lastmod>
   </url><url>
-    <loc>https://shayanp.me/ideas/</loc>
-    <lastmod>2024-10-30T01:23:20-04:00</lastmod>
-  </url><url>
     <loc>https://shayanp.me/tags/model-architecture/</loc>
-    <lastmod>2024-10-30T01:23:20-04:00</lastmod>
-  </url><url>
-    <loc>https://shayanp.me/tags/nlp/</loc>
-    <lastmod>2024-10-30T01:23:20-04:00</lastmod>
-  </url><url>
-    <loc>https://shayanp.me/tags/</loc>
     <lastmod>2024-10-30T01:23:20-04:00</lastmod>
   </url><url>
     <loc>https://shayanp.me/learning/</loc>
