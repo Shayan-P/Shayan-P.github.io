@@ -7,41 +7,20 @@
     <generator>Hugo -- 0.139.3</generator>
     <language>en</language>
     <copyright>Shayan Pardis</copyright>
-    <lastBuildDate>Sat, 30 Nov 2024 01:23:20 -0400</lastBuildDate>
+    <lastBuildDate>Wed, 30 Oct 2024 01:23:20 -0400</lastBuildDate>
     <atom:link href="https://shayanp.me/tags/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Agentic-AI</title>
-      <link>https://shayanp.me/tags/agentic-ai/</link>
-      <pubDate>Sat, 30 Nov 2024 01:23:20 -0400</pubDate>
-      <guid>https://shayanp.me/tags/agentic-ai/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>LLM</title>
-      <link>https://shayanp.me/tags/llm/</link>
-      <pubDate>Sat, 30 Nov 2024 01:23:20 -0400</pubDate>
-      <guid>https://shayanp.me/tags/llm/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>NLP</title>
-      <link>https://shayanp.me/tags/nlp/</link>
-      <pubDate>Sat, 30 Nov 2024 01:23:20 -0400</pubDate>
-      <guid>https://shayanp.me/tags/nlp/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Reasoning</title>
-      <link>https://shayanp.me/tags/reasoning/</link>
-      <pubDate>Sat, 30 Nov 2024 01:23:20 -0400</pubDate>
-      <guid>https://shayanp.me/tags/reasoning/</guid>
-      <description></description>
-    </item>
     <item>
       <title>Model Architecture</title>
       <link>https://shayanp.me/tags/model-architecture/</link>
       <pubDate>Wed, 30 Oct 2024 01:23:20 -0400</pubDate>
       <guid>https://shayanp.me/tags/model-architecture/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>NLP</title>
+      <link>https://shayanp.me/tags/nlp/</link>
+      <pubDate>Wed, 30 Oct 2024 01:23:20 -0400</pubDate>
+      <guid>https://shayanp.me/tags/nlp/</guid>
       <description></description>
     </item>
     <item>
